@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        background-color: darkslategray;
+      }
+      .container {
+        background-color: black;
+        height: 500px;
+        width: 800px;
+        margin: 100px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 5px gray;
+      }
+      input {
+        padding: 10px;
+        width: 85%;
+        border-radius: 10px;
+        border: 0;
+        outline: 0;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      li {
+        position: relative;
+        background-color: gray;
+        padding: 10px;
+        width: 90%;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      li .fa-close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .done {
+        text-decoration: line-through;
+        color: black;
+        background-color: rgb(58, 56, 56);
+      }
+      .container .flex{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      .container .flex .submit{
+        height: 40px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="flex">
+        <input type="text" placeholder="Write Something Here" name="" id="" />
+        <button class="submit" onclick="submit()">submit</button>
+      </div>
+      <hr />
+      <ul class="to-do-box"></ul>
+    </div>
+  </body>
+  <script>
+    let input = document.querySelector("input");
+    let box = document.querySelector(".to-do-box");
+    let ls = localStorage.getItem("ToDo");
+    let ToDo = ls ? JSON.parse(ls) : [];
+
+    function submit(){
+      addtodo(input.value);
+      input.value == "";
+    }
+    const addtodo = (item) => {
+      const listitem = document.createElement("li");
+      listitem.innerHTML = `
+            ${item}
+            <div class="fa-solid fa-close"></div>
+            `;
+
+      listitem.addEventListener("click", function () {
+        listitem.classList.toggle("done");
+      });
+      listitem
+        .querySelector(".fa-close")
+        .addEventListener("click", function () {
+          listitem.remove();
+        });
+      box.appendChild(listitem);
+    };
+  </script>
+</html>
