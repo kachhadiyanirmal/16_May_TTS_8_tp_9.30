@@ -1,0 +1,36 @@
+*{
+ margin: 0;
+ padding: 0;
+
+}
+span{
+ color: red;
+}
+section{
+ height:auto;
+ width:50%;
+ border: 1px solid black;
+ margin: 50px auto;
+}
+.regetetion{
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ place-content: center;
+ margin: 20px;
+}
+input{
+ height: 25px;
+ width: 200px;
+}
+.Address{
+ height: 100px;
+
+}
+.btn{
+ margin: 20px;
+ padding: 5px;
+ background-color: green;
+ border-radius: 5px;
+}
+
+

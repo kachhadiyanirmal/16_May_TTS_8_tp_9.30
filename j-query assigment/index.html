@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regitetion Form </title>
+    <link rel="icon" href="img/illustration-paper_53876-5860.avif" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section>
+        <form action="">
+
+            <div class="regetetion">
+                <div class="frist">
+                    Frist Name 
+                </div>
+                <div class="input">
+                    <input type="text" id="frist"  onkeyup="return nameValid(this , 'mgs1')"  >
+                </div>
+                <div class="tex">
+                    <span id="mgs1"></span>
+                </div>
+            </div>
+
+            <div class="regetetion">
+                <div class="frist">
+                    last Name 
+                </div>
+                <div class="input">
+                    <input type="text" id="last"  onkeyup="return nameValid(this , 'mgs2')">
+                </div>
+                <div class="tex">
+                    <span id="mgs2"></span>
+                </div>
+            </div>
+
+            <div class="regetetion">
+                <div class="frist">
+                     Email
+                </div>
+                <div class="input">
+                    <input type="text" id="email">
+                </div>
+                <div class="tex">
+                    <span id="mgs3"></span>
+                </div>
+            </div>
+
+            <div class="regetetion">
+                <div class="frist">
+                    Mobile No.
+                </div>
+                <div class="input">
+                    <input type="text" id="Mobile"  onkeyup="return checkNumValid(this, 'mgs4')" >
+                </div>
+                <div class="tex">
+                    <span id="mgs4"></span>
+                </div>
+            </div>
+
+            <div class="regetetion">
+                <div class="frist">
+                    Gender 
+                </div>
+                <div class="input">
+                    <input type="radio" id="male"> Male
+                    <input type="radio" id="female">Female
+                </div>
+                <div class="tex">
+                    <span id="mgs5"></span>
+                </div>
+            </div>
+
+            <div class="regetetion">
+                <div class="frist">
+                    Date Of Brith
+                </div>
+                <div class="input">
+                    <input type="date"  id="date">
+                </div>
+                <div class="tex">
+                    <span id="mgs6"></span>
+                </div>
+            </div>
+
+
+            <div class="regetetion">
+                <div class="frist">
+                    Address
+                </div>
+                <div class="input">
+                    <input type="text" class="Address" id="add">
+                </div>
+                <div class="tex">
+                    <span id="mgs7"></span>
+                </div>
+            </div>
+
+            <div class="regetetion">
+                <div class="frist">
+                    City
+                </div>
+                <div class="input">
+                    <input type="text" id="city">
+                </div>
+                <div class="tex">
+                    <span id="mgs8"></span>
+                </div>
+            </div>
+
+            <div class="regetetion">
+                <div class="frist">
+                    Aria Pin 
+                </div>
+                <div class="input">
+                    <input type="text" id="pin">
+                </div>
+                <div class="tex">
+                    <span id="mgs9"></span>
+                </div>
+            </div>
+
+            <div class="regetetion">
+                <div class="frist">
+                    Qualification 
+                </div>
+                <div class="input">
+                    <select name="" id="">
+
+                        <option value="it">Select Qualification</option>
+                        <option value="it">it</option>
+                        <option value="none it"> None it</option>
+                    </select>
+                </div>
+                <div class="tex">
+                    <span id="mgs10"></span>
+                </div>
+            </div>
+
+            <div class="regetetion">
+                <div class="frist">
+                    Specialazetion 
+                </div>
+                <div class="input">
+                    <input type="checkbox">Computre scince
+                    <input type="checkbox">it
+                    <input type="checkbox">tele communication
+                </div>
+                <div class="tex">
+                    <span id="mgs11"></span>
+                </div>
+            </div>
+
+            <div class="regetetion">
+                <div class="frist">
+                    Password 
+                </div>
+                <div class="input">
+                    <input type="text" id="pass">
+                </div>
+                <div class="tex">
+                    <span id="mgs12"></span>
+                </div>
+            </div>
+
+            <button class="btn" type="submit" onclick="return checkename()">Registation</button>
+
+        </form>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
